@@ -11,7 +11,7 @@ class GetHandler(BaseHTTPRequestHandler):
                          'text/plain; charset=utf-8')
         self.end_headers()
         if message != None:
-            self.wfile.write(message)
+            self.wfile.write(message.res)
         else:
             self.wfile.write("<h1>ERROR: THE URL IS INVALID</h1>")
 
